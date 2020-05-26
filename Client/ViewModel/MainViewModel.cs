@@ -24,9 +24,13 @@ namespace Client.ViewModel
             //  );
 
             //WD_LoginWindow loginWindow = new WD_LoginWindow() { Height = 300, Width=450};
-            //loginWindow.ShowDialog();
-
             
+            if(!Isloaded)
+            {
+                Isloaded = true;
+                Login loginWindow = new Login();
+                loginWindow.ShowDialog();
+            }
             
         }
     }
