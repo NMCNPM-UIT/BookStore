@@ -63,6 +63,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Design\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Design\UCSach.xaml.cs">
       <DependentUpon>UCSach.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
     <Compile Include="WD_LoginWindow.xaml.cs">
       <DependentUpon>WD_LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Design\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Design\UCSach.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,7 +145,21 @@
       <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\img\teddy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="teddy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\img\teddy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="teddy1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.2\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.2\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
